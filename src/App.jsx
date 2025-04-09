@@ -52,7 +52,6 @@ import { server } from "./server";
 const App = () => {
   const { isAuthenticated } = useSelector((state) => state.user);
 
-  //load user and seller on load
   useEffect(() => {
     store.dispatch(loadUser()).catch((error) => {
       console.error("Error loading user:", error);
